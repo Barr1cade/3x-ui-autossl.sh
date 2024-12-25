@@ -1,4 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    echo "This script is being executed."
+else
+    echo "This script is being sourced. Exiting..."
+    exit 1
+fi
 
 # Define the database path and the SQL statements template (to be modified based on last ID)
 DB_PATH="/etc/x-ui/x-ui.db"
